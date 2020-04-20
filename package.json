@@ -4,7 +4,6 @@
     "test": "tsc && jest && prettier --check src"
   },
   "dependencies": {
-    "caddy-npm": "^2.0.0-beta.20",
     "crypto-random-string": "^3.2.0",
     "express": "^4.17.1",
     "mailparser": "^2.7.7",
@@ -45,22 +44,18 @@
       "script": "lib",
       "env": {
         "NODE_ENV": "production",
-        "WEB_PORT": "8000",
+        "WEB_PORT": "8070",
         "EMAIL_PORT": "25",
-        "BASE_URL": "https://www.kill-the-newsletter.com",
-        "EMAIL_DOMAIN": "kill-the-newsletter.com",
-        "ISSUE_REPORT": "mailto:kill-the-newsletter@leafac.com"
+        "BASE_URL": "https://newsletter.binarypaean.com",
+        "EMAIL_DOMAIN": "newsletter.binarypaean.com",
+        "ISSUE_REPORT": "mailto:aaron@binarypaean.com"
       }
     },
-    {
-      "name": "caddy",
-      "script": "caddy run"
-    }
   ],
   "deploy": {
     "production": {
       "user": "root",
-      "host": "kill-the-newsletter.com",
+      "host": "newsletter.binarypaean.com",
       "ref": "origin/master",
       "repo": "git@github.com:leafac/www.kill-the-newsletter.com.git",
       "path": "/root/www.kill-the-newsletter.com",
